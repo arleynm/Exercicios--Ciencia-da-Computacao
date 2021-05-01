@@ -6,3 +6,7 @@ Linguagens:
 * C
 * C++
 ---
+Conhecimento:
+* AEDS I
+* AEDS II
+* AEDS III
