@@ -15,14 +15,15 @@ creu creu creu
 #include<stdio.h>
 #include <conio.h>
 
-int main (){
+int main ()
+{
 	
     int creu,cont,soma;
 	printf("Velocidade do Creu: ");
 	scanf("%i",&creu);
 	printf("A velocidade %i do creu  \n",creu);
-	for(cont=1; cont<=creu; cont++){
-	
-	printf(" creu ");
+	for(cont=1; cont<=creu; cont++)
+    {
+	    printf(" creu ");
 	}
 }
