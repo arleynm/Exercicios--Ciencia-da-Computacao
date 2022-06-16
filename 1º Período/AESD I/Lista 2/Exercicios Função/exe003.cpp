@@ -14,7 +14,7 @@ int main()
     {
 	    for(j=0;j<4;j++)
         {
-		    printf("Linha %i e Coluna %i:",i+1,j+1);
+		    printf("Linha%i: Coluna%i:",i+1,j+1);
 		    scanf("%i", &matriz[i][j]);	
 	    }
     }

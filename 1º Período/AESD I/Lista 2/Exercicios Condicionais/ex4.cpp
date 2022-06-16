@@ -1,54 +1,50 @@
-/*Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem
-  ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
-  o Dicas:
-  o Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
-  o Triângulo Equilátero: três lados iguais;
-  o Triângulo Isósceles: quaisquer dois lados iguais;
-  o Triângulo Escaleno: três lados diferentes; 
+/*Agora faça um programa que irá simular sua aprovação na UIT, o usuário deverá entrar com 3notas, 
+  sendoque as duas primeiras devem ser menor que 30 e a última menor que 40.O usuário deverá entrar 
+  também como percentual de faltas.Como vocês sabem o aluno só é aprovado se tiver frequencia maior 
+  que 75 e nota maiorque 60. Nota entre 40 e 60 é recuperação. Frequencia abaixo de 75 e nota abaixo 
+  de 40 já é reprovação direto. 
 */
-
-
-
 #include <stdio.h>
+#include <stdlib.h>
 
 
-int main()
-{	
-	int l1,l2,l3;
+int main(){
 	
-	printf("Lado 1 :");
-	scanf("%i",&l1);
+	int faltas;
+	float nota1,nota2,nota3,total,frequencia;
 	
-	printf("Lado 2 :");
-	scanf("%i",&l2);
+	nota1 = 100;
+	nota2 = 100;
+	nota3 = 100;
 	
-	printf("Lado 3 :");
-	scanf("%i",&l3);
-
-	if (l1 + l2 == l3)
-    {
-		if (l1 != l2 && l1 != l3 && l2 != l3)
-        {
-			printf("TRIANGULO ESCALENO");
-		}
-		else
-        {
-		    if (l1 == l2 && l2 == l3)
-            {
-			    printf("TRIANGULO EQUILATERO");	
-		    }
-		    else
-            {
-                if (l1 == l2 || l1 == l3 || l2 == l3)
-                {
-			        printf("TRIANGULO ISOSCELES");
-		        }
-		    }
-		}
+	while(nota1 > 30 || nota2 > 30){
+	printf("Nota 1:");
+	scanf("%f",&nota1);
+	
+	printf("Nota 2:");
+	scanf("%f",&nota2);
+}
+	while(nota3 > 40){
+		printf("Nota 3:");
+		scanf("%f",&nota3);
 	}
-	else
-    {
-		printf("Não pode ser um Triangulo");
+	
+	printf("Percentual de Faltas :");
+	scanf("%i",&faltas);
+	frequencia = 100 - faltas;
+	
+	total = (nota1 + nota2 + nota3);
+	
+	if (total < 40 || frequencia < 75){
+		printf("REPROVADO");
 	}
-		
+	else{
+	if (total > 60 && frequencia > 75 ){
+		printf("APROVADO");
+	}
+	
+	if (total > 40 && total < 60){
+		printf("RECUPERACAO");
+	}
+	}	
 }

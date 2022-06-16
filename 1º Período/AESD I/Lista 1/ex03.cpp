@@ -1,4 +1,4 @@
-/* Faça um programa que solicite ao usuário seu sexo (M ou F), dia de nascimento, mês de
+/*2- Faça um programa que solicite ao usuário seu sexo (M ou F), dia de nascimento, mês de
    nascimento, ano de nascimento, peso, altura e quanto calça. 
 */
 
@@ -40,5 +40,8 @@ int main
 	printf(" \n -=--=--=--=--=--=--=--=--=- \n");
 
 	return(0);
+
+
+
 
 }
